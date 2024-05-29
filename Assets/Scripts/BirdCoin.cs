@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstaculo : MonoBehaviour
+public class BirdCoin : MonoBehaviour
 {
     [SerializeField]
     private float velocidade = 0.6f;
@@ -11,7 +11,7 @@ public class Obstaculo : MonoBehaviour
     private float variacaoY;
     private void Awake()
     {
-        this.transform.Translate(Vector3.up * Random.Range(-variacaoY,variacaoY));
+        this.transform.Translate(Vector3.up * Random.Range(-variacaoY, variacaoY));
     }
 
     // Update is called once per frame
