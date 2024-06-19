@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    public CoinManager cm;
     [SerializeField]
     private float velocidade = 3;
     //cria a variavel fisica do tipo Rigidbody
@@ -19,7 +20,7 @@ public class Bird : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Clicou");
+    
             //chama o método impulsionar
             //o this serve para indicar que é o objeto ativo naquele momento que recerá ação
             this.Impulsionar();
@@ -29,5 +30,15 @@ public class Bird : MonoBehaviour
     private void Impulsionar(){
     //adiciona a variável física e o método AddForce, adicionando uma força para cima do tipo impulso
         this.fisica.AddForce(Vector2.up * velocidade, ForceMode2D.Impulse);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+     if(other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            cm.coinCount++;
+            Debug.Log(cm.coinCount);
+        }  
     }
 }
