@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: initial; background-color: rgba(94, 36, 149, 0.92); width: 50px; height: 50px; flex-basis: auto; align-self: center; margin-top: 30px;">
-        <ui:Label tabindex="-1" text="0&#10;" display-tooltip-when-elided="true" name="pontos" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; justify-content: flex-end; -unity-font-style: bold; align-self: auto;" />
+    <ui:VisualElement style="flex-grow: initial; background-color: rgb(248, 183, 51); width: 35px; height: 45px; flex-basis: auto; align-self: flex-start; margin-top: 12px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; align-items: flex-end; justify-content: space-between; flex-direction: column-reverse; margin-left: 12px;">
+        <ui:Label tabindex="-1" text="0&#10;" display-tooltip-when-elided="true" name="pontos" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; justify-content: flex-end; -unity-font-style: bold; align-self: center; align-items: auto; white-space: nowrap; text-overflow: ellipsis; margin-top: 2px; margin-right: 2px; padding-top: 2px; padding-bottom: 2px; height: 36px;" />
     </ui:VisualElement>
 </ui:UXML>
