@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 public class UIScript : MonoBehaviour
 {
-    public CoinManager cm;
     private Label textoPontuacao;
+    public int coinCount;
 
     void Start()
     {
@@ -16,7 +16,8 @@ public class UIScript : MonoBehaviour
 
     public void adicionarPonto()
     {
-        cm.coinCount++;
+        coinCount++;
+        this.textoPontuacao.text = coinCount.ToString();
     }
     void OnTriggerEnter2D(Collider2D other)
         {
@@ -24,10 +25,8 @@ public class UIScript : MonoBehaviour
             {
             Debug.Log(textoPontuacao.text);
                 adicionarPonto();
-                this.textoPontuacao.text = cm.coinCount.ToString();
                 Destroy(other.gameObject);
                
-                Debug.Log(cm.coinCount);
                
             }
           

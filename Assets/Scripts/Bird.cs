@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    public CoinManager cm;
+    public UIScript cm;
     [SerializeField]
     private float velocidade = 3;
     //cria a variavel fisica do tipo Rigidbody
@@ -37,7 +37,7 @@ public class Bird : MonoBehaviour
      if(other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
-            cm.coinCount++;
+            cm.adicionarPonto();
             Debug.Log(cm.coinCount);
         }  
     }
