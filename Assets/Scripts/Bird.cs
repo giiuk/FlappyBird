@@ -9,6 +9,8 @@ public class Bird : MonoBehaviour
     private float velocidade = 3;
     //cria a variavel fisica do tipo Rigidbody
     Rigidbody2D fisica;
+
+    public GameOver game;
     
     //método Awake é chamado toda vez que o objeto é criado
     private void Awake(){
@@ -40,5 +42,10 @@ public class Bird : MonoBehaviour
             cm.adicionarPonto();
             Debug.Log(cm.coinCount);
         }  
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        game.GameOverActive();
     }
 }
